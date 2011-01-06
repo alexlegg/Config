@@ -1,0 +1,6 @@
+*
+!.gitignore
+!.vim*
+!.vim/*
+!.bash*
+!.bash/*
