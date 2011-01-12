@@ -5,38 +5,59 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/compile
+~MSle0~/)
 
 # Last Substitute Search Pattern:
-~MSle0&Bot
+~MSle0&sets
 
 # Last Substitute String:
-$---
+$
 
 # Command Line History (newest to oldest):
-:wq
 :q
+:wq
+:Scratch
+:q!
+:e blah
+:n
 :w
-:vsp ../../sccompiler/SCCompiler/Main.hs
-:e solver.hs
+:retab
+:vsp Simulator.hs
+:vsp Types.hs
+:'<,'>s/sets/gets/g
+:'<,'>s/gets/sets/g
+:later 4h
+:earlier 3h
+:'<,'>s/expContains/gets/g
+:'<,'>s/expContains/sets/g
+:set cc=
+:set cc=80
+:e lolwut
+:vsp S
+:'<,'>s/condContains/expContains/g
+:'<,'>s/condContains/condContainsH/g
+:'<,'>s/s /h /g
+:e Types.hs
+:vsp Main.hs
+:e Generator.hs
+:e Simulator.hs
+:e Parser.hs
+:we
+:sp Main.hs
+:sp Types.hs
+:vsp Generator.hs
 :e Compiler.hs
 :e SymTab.hs
+:grep "genSymTab" *.hs
+:e solver.hs
+:e
+:vsp ../../sccompiler/SCCompiler/Main.hs
 :vsp Parser.hs
 :sp ../../bddgenerator/compiler/Compiler.hs
 :%s/Bot/Co.Bot/g
 :%s/Top/Co.Top/g
-:e Types.hs
 :e Translator.hs
 :e Main.hs
-:e Simulator.hs
-:e Generator.hs
-:vsp Simulator.hs
-:set cc=
-:set cc=80
-:sp Types.hs
-:vsp Main.hs
-:q!
-:e
 :w Translator.hs
 :vsp Translator
 :vsp Compile.hs
@@ -55,7 +76,6 @@ $---
 :colorscheme phd
 :colorscheme delek
 :vsp ~/src/bddgenerator/compiler/Compiler.hs
-:we
 :vsp ~/
 :ls
 ::ls
@@ -71,22 +91,17 @@ $---
 :colorscheme github
 :let hs_highlight_types=1
 :set hs_highlight_types=1
-:e blah
 :vsp ~/test.c
 :vsp
-:vsp Types.hs
 :%s/genExpr /genExpr' /g
 :%/genExpr /genExpr' /g
 :%s/genExpr/genExpr'/g
-:sp Main.hs
 :'<,'>s/getTr/getCompl/g
-:vsp Generator.hs
 :cn
 :cc
 :cw
 :grep genExpr *.hs
 :grep genExpr
-:retab
 :e ~/.vim/indent.vim
 :set expandtab
 :e ../test.sh
@@ -99,26 +114,74 @@ $---
 :'<,'>s/\t=/\n=/g
 :'<,'>s/v\t/v ev\t/g
 :'<,'>s/v\t/v e\t/g
-:'<,'>s/vals/v/g
-:'<,'>s/result/event/g
-:sp Parser.hs
-:'<,'>s/Expr/Cond/g
-:'<,'>s/printEnums/printSim/g
-:sp Generator.hs
-:'<,'>s/(head chart)/root/g
-:'<,'>s/\(head chart\)/root/g
-:s cc=
-:'<,'>s/sc /s /g
-:e Generator.h
-:'<,'>s/a/b/g
-:set cc 80
-:'<,'>s/String/Exp/g
-:'<,'>s/String/c/g
 
 # Search String History (newest to oldest):
-? ^
+?/)
 ? ---
+??Erro
+??Switch
+?/fromJust
+?/evalExpr
+?/andList
+?/addHistoryInit
+??stateChanges
+?/genExprTrans
+?/genExpr'
+?/balls
+?/setsH
+?/setsJ
+?/then e
+?/\$
+?/$
+?/trace
+?/getsH
+?/setInitial
+?/genHistTrans
+?/Check if a Ne
+? sets
+? gets
+?/addHistoryIni
+? condContains
+?/genHistTans
+?/lookupHist
+?/r
+?/add
+?/expContains
+?/H
+?/expcontains
+?/contains
+?/exprcontains
+??null
+??ptr
+?/unwrap
+?/TODO
+?/genInit
+?/head
+?/prE
+?/genExpr
+??(
+?/unwrapChanges
+?/setIniti
+?/in
+?/addHist
+?/genExprTra
+?/genExprTran
+?/genTransition
+? s 
+?/condContainsG
+?/condContainsH
+?/lookupState
+?/++
+?/genExpr[^'T]
+?/addCom
+?/"
+?/history
+?/runStack
+?/genSymTab
+?/ScopeS
+?/CTX
 ?/compile
+?/cuddInit
 ?/enum
 ?/SymbolVal
 ?/Enum
@@ -142,80 +205,17 @@ $---
 ?/String
 ? name
 ??r 
-?/lookupState
 ? genExpr 
-?/genExpr
 ?/I
-?/andList
-?/\$
-?/$
-?/trace
 ?/tail
 ?/o
 ?/getCompl
-?/contains
 ??tr
-?/fromJust
-??Switch
-?/)
 ?/0
 ?/NextEq
-??stateChanges
 ?/Eq
-?/genExprTrans
+? ^
 ?/=
-?/]
-?/getTrans
-? getTr
-?/tra
-?/evalCond
-?/genCompl
-?/printExpr
-?/++
-?/parent
-?/(Impl
-?/Impl
-?/prE
-?/Not
-?/E
-?/Next
-?/v
-?/setPa
-? &&
-? evalCond \(([^)]*)\) v ev
-? evalExpr \(([^)]*)\) v ev
-? \t=
-??va
-??ba
-?/nam
-? v\t
-? vals
-? result
-?/La
-??(
-??eval
-?/els
-?/th
-?/e
-?/s1
-?/fol
-??And
-?/&
-? printEnums
-??simPro
-??ta
-?/"t
-? (head chart)
-? \(head chart\)
-??roo
-??St
-?/el
-?/the
-??set
-??tp
-?/trac
-?/Just
-??Ju
 
 # Expression History (newest to oldest):
 
@@ -225,148 +225,149 @@ $---
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	!.bash*
-""1	LINE	0
-	!.gitignore
-	!.vimrc
-	!.bashrc
-"2	LINE	0
-	!.bash/*
-	!.vim/
-"3	LINE	0
-	!.vim/*
-"4	LINE	0
-	!.vim/
-"5	LINE	0
-	#!*/
-"6	LINE	0
-	[^.]*
-"7	LINE	0
-	[^.]*
+"0	CHAR	0
+	init 
+"1	CHAR	0
+	(line 0, column 0)
+"2	CHAR	0
+	(line 27, column 33)
+"3	CHAR	0
+	(line 27, column 33)
+"4	CHAR	0
+	(line 27, column 19)
+"5	CHAR	0
+	(line 27, column 6)
+"6	CHAR	0
+	(line 27, column 18)
+"7	CHAR	0
+	CTX "eg" (line 27, column 18
 "8	LINE	0
 	
 "9	LINE	0
-	expToECTX (Or e1 e2)          = CTX pos Co.Top
+	
 "a	CHAR	0
-	CTX pos (Co.Eq (CTX pos (Co.Symbol (var s1))) (CTX pos (Co.Symbol (var s2))))
+	setsContainsH 
 "b	CHAR	0
 		
 "q@	CHAR	0
 	i €kd
 "u	CHAR	0
 	a€kuAqualified Compiler (Expr)€kb(..)) as C:wAo:wbbDx:wuu:wD€kl€kl€kl€kl€kl€kl€kl€kl€kl€klpu€klp€kri A€kb:w:w/ExpriCo.:w:s€kb%s/Top/Co.Top/g:€ku€kl€kl€kl€kl€kl€kl€kl€kl€kl€kb€kb€kbBot€kr€kr€kr€kr€kr€kr€kr€kb€kb€kbBot:w
-"-	CHAR	0
-	/
+""-	CHAR	0
+	 
 
 # File marks:
 'M  9  0  ~/src/SCCompiler/readXML.hs
 '0  1  0  ~/.gitignore
-'1  2  5  ~/.gitignore
-'2  2  7  ~/.gitignore
-'3  2  10  ~/.gitignore
-'4  2  7  ~/.gitignore
-'5  2  6  ~/.gitignore
-'6  2  0  ~/.gitignore
-'7  1  2  ~/.gitignore
-'8  1  6  ~/.gitignore
-'9  5  0  ~/src/bddgenerator/compiler/Compiler.hs
+'1  1  8  ~/__Scratch__
+'2  10  77  ~/foo
+'3  8  0  ~/blah
+'4  8  0  ~/blah
+'5  50  0  ~/src/sccompiler/SCCompiler/Main.hs
+'6  1  0  ~/src/sccompiler/SCCompiler/Generator.hs
+'7  3  0  ~/src/sccompiler/SCCompiler/lolwut
+'8  1  0  ~/src/sccompiler/SCCompiler/Generator.h
+'9  193  44  ~/src/bddgenerator/compiler/Compiler.hs
 
 # Jumplist (newest first):
 -'  1  0  ~/.gitignore
--'  2  0  ~/.gitignore
--'  5  0  ~/src/bddgenerator/compiler/Compiler.hs
--'  1  0  ~/src/bddgenerator/compiler/Compiler.hs
--'  298  4  ~/src/bddgenerator/compiler/Compiler.hs
--'  76  0  ~/src/sccompiler/SCCompiler/Main.hs
--'  93  8  ~/src/sccompiler/SCCompiler/Main.hs
--'  1  0  ~/src/sccompiler/SCCompiler/Main.h
--'  44  0  ~/src/sccompiler/SCCompiler/Translator.hs
--'  48  0  ~/src/bddgenerator/compiler/solver.hs
--'  235  2  ~/src/bddgenerator/compiler/Compiler.hs
--'  213  13  ~/src/bddgenerator/compiler/Compiler.hs
--'  79  4  ~/src/bddgenerator/compiler/Compiler.hs
--'  63  0  ~/src/bddgenerator/compiler/solver.hs
--'  58  0  ~/src/bddgenerator/compiler/SymTab.hs
--'  56  7  ~/src/bddgenerator/compiler/SymTab.hs
--'  47  18  ~/src/bddgenerator/compiler/SymTab.hs
--'  46  5  ~/src/bddgenerator/compiler/SymTab.hs
--'  100  16  ~/src/bddgenerator/compiler/SymTab.hs
--'  94  14  ~/src/bddgenerator/compiler/SymTab.hs
--'  72  34  ~/src/bddgenerator/compiler/SymTab.hs
--'  66  32  ~/src/bddgenerator/compiler/SymTab.hs
--'  52  28  ~/src/bddgenerator/compiler/SymTab.hs
--'  49  30  ~/src/bddgenerator/compiler/SymTab.hs
--'  22  12  ~/src/bddgenerator/compiler/SymTab.hs
--'  1  0  ~/src/bddgenerator/compiler/SymTab.hs
--'  1  0  ~/src/bddgenerator/compiler/Parser.hs
--'  104  0  ~/src/bddgenerator/compiler/Parser.hs
--'  74  29  ~/src/bddgenerator/compiler/Parser.hs
--'  67  17  ~/src/bddgenerator/compiler/Compiler.hs
--'  46  0  ~/src/bddgenerator/compiler/Compiler.hs
--'  41  45  ~/src/sccompiler/SCCompiler/Translator.hs
--'  35  89  ~/src/sccompiler/SCCompiler/Translator.hs
--'  45  0  ~/src/sccompiler/SCCompiler/Translator.hs
--'  16  18  ~/src/sccompiler/SCCompiler/Translator.hs
--'  13  41  ~/src/sccompiler/SCCompiler/Translator.hs
--'  38  38  ~/src/sccompiler/SCCompiler/Translator.hs
--'  46  5  ~/src/sccompiler/SCCompiler/Translator.hs
--'  32  0  ~/src/sccompiler/SCCompiler/Translator.hs
--'  18  10  ~/src/sccompiler/SCCompiler/Translator.hs
--'  5  26  ~/src/sccompiler/SCCompiler/Translator.hs
--'  27  0  ~/src/sccompiler/SCCompiler/Translator.hs
--'  7  27  ~/src/sccompiler/SCCompiler/Translator.hs
--'  22  0  ~/src/sccompiler/SCCompiler/Translator.hs
--'  21  26  ~/src/sccompiler/SCCompiler/Translator.hs
--'  20  24  ~/src/sccompiler/SCCompiler/Translator.hs
--'  14  0  ~/src/sccompiler/SCCompiler/Simulator.hs
--'  52  12  ~/src/sccompiler/SCCompiler/Main.hs
--'  53  36  ~/src/sccompiler/SCCompiler/Main.hs
--'  1  0  ~/src/sccompiler/SCCompiler/Main.hs
--'  1  0  ~/src/sccompiler/SCCompiler/Types.hs
--'  45  16  ~/src/sccompiler/SCCompiler/Types.hs
--'  47  1  ~/src/sccompiler/SCCompiler/Types.hs
--'  7  0  ~/src/sccompiler/SCCompiler/Main.hs
--'  1  27  ~/src/sccompiler/SCCompiler/Translator.hs
--'  56  5  ~/src/sccompiler/SCCompiler/Main.hs
--'  1  0  ~/src/sccompiler/SCCompiler/Translator
--'  1  0  ~/src/sccompiler/SCCompiler/Output.hs
--'  13  0  ~/src/sccompiler/SCCompiler/Output.hs
--'  55  5  ~/src/sccompiler/SCCompiler/Main.hs
--'  57  5  ~/src/sccompiler/SCCompiler/Main.hs
--'  58  5  ~/src/sccompiler/SCCompiler/Main.hs
--'  11  0  ~/src/sccompiler/SCCompiler/Main.hs
--'  47  18  ~/src/sccompiler/SCCompiler/Main.hs
--'  74  0  ~/src/sccompiler/SCCompiler/Main.hs
--'  94  71  ~/src/sccompiler/SCCompiler/Main.hs
--'  44  5  ~/src/sccompiler/SCCompiler/Main.hs
--'  5  3  ~/src/sccompiler/sccompiler.hs
--'  16  15  ~/src/sccompiler/SCCompiler/Output.hs
--'  5  0  ~/src/sccompiler/SCCompiler/Output.hs
--'  105  0  ~/src/sccompiler/SCCompiler/Generator.hs
--'  106  4  ~/src/sccompiler/SCCompiler/Generator.hs
--'  110  0  ~/src/sccompiler/SCCompiler/Generator.hs
--'  1  0  ~/src/sccompiler/SCCompiler/Generator.h
--'  21  37  ~/src/bddgenerator/build
--'  4  21  ~/src/sccompiler/sccompiler.hs
--'  15  54  ~/src/sccompiler/test.sh
--'  3  0  ~/src/sccompiler/sccompiler.hs
--'  1  0  ~/src/bddgenerator/build
--'  21  0  ~/src/bddgenerator/compiler/Compiler.hs
--'  68  34  ~/src/bddgenerator/compiler/Compiler.hs
--'  66  5  ~/src/bddgenerator/compiler/Compiler.hs
--'  64  0  ~/src/bddgenerator/compiler/Compiler.hs
--'  73  0  ~/src/bddgenerator/compiler/solver.hs
--'  26  0  ~/src/bddgenerator/compiler/solver.hs
--'  1  0  ~/src/bddgenerator/compiler/solver.hs
--'  74  8  ~/src/sccompiler/SCCompiler/Generator.hs
--'  1  0  ~/src/sccompiler/SCCompiler/Types.h
+-'  1  8  ~/__Scratch__
+-'  22  0  ~/.vimrc
+-'  10  77  ~/foo
+-'  6  4  ~/foo
+-'  4  4  ~/foo
+-'  3  74  ~/foo
+-'  1  78  ~/foo
+-'  8  0  ~/blah
+-'  50  0  ~/src/sccompiler/SCCompiler/Main.hs
+-'  49  44  ~/src/sccompiler/SCCompiler/Main.hs
+-'  47  20  ~/src/sccompiler/SCCompiler/Main.hs
+-'  60  0  ~/src/sccompiler/SCCompiler/Main.hs
+-'  59  0  ~/src/sccompiler/SCCompiler/Main.hs
+-'  58  0  ~/src/sccompiler/SCCompiler/Main.hs
+-'  57  0  ~/src/sccompiler/SCCompiler/Main.hs
+-'  56  0  ~/src/sccompiler/SCCompiler/Main.hs
+-'  55  0  ~/src/sccompiler/SCCompiler/Main.hs
+-'  54  0  ~/src/sccompiler/SCCompiler/Main.hs
+-'  53  0  ~/src/sccompiler/SCCompiler/Main.hs
+-'  52  0  ~/src/sccompiler/SCCompiler/Main.hs
+-'  51  25  ~/src/sccompiler/SCCompiler/Main.hs
+-'  41  27  ~/src/sccompiler/SCCompiler/Main.hs
+-'  62  6  ~/src/sccompiler/SCCompiler/Main.hs
+-'  35  5  ~/src/sccompiler/SCCompiler/Main.hs
+-'  1  0  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  330  0  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  232  21  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  149  9  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  142  18  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  131  15  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  123  14  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  116  5  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  115  18  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  113  16  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  112  10  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  111  18  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  101  24  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  77  26  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  320  7  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  239  48  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  154  0  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  153  0  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  107  20  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  94  19  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  43  14  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  233  25  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  223  0  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  202  29  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  231  0  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  230  0  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  227  37  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  226  37  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  224  20  ~/src/sccompiler/SCCompiler/Generator.hs
 -'  201  0  ~/src/sccompiler/SCCompiler/Generator.hs
--'  147  13  ~/src/sccompiler/SCCompiler/Generator.hs
--'  146  13  ~/src/sccompiler/SCCompiler/Generator.hs
--'  85  8  ~/src/sccompiler/SCCompiler/Generator.hs
--'  63  57  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  166  42  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  162  0  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  161  0  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  78  31  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  74  33  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  67  31  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  76  31  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  73  33  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  72  0  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  71  0  ~/src/sccompiler/SCCompiler/Generator.hs
 -'  135  0  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  150  32  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  209  36  ~/src/bddgenerator/compiler/Compiler.hs
+-'  193  8  ~/src/bddgenerator/compiler/Compiler.hs
+-'  64  8  ~/src/bddgenerator/compiler/solver.hs
+-'  1  0  ~/src/bddgenerator/compiler/Dump.hs
+-'  65  29  ~/src/bddgenerator/compiler/solver.hs
+-'  1  0  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  330  0  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  232  21  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  149  9  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  142  18  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  131  15  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  123  14  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  116  5  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  115  18  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  113  16  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  112  10  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  111  18  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  101  24  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  77  26  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  320  7  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  239  48  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  154  0  ~/src/sccompiler/SCCompiler/Generator.hs
+-'  10  77  ~/foo
+-'  6  4  ~/foo
+-'  4  4  ~/foo
+-'  3  74  ~/foo
+-'  1  78  ~/foo
+-'  8  0  ~/blah
+-'  50  0  ~/src/sccompiler/SCCompiler/Main.hs
+-'  49  44  ~/src/sccompiler/SCCompiler/Main.hs
+-'  47  20  ~/src/sccompiler/SCCompiler/Main.hs
 
 # Buffer list:
 %~/.gitignore	1	0
@@ -391,118 +392,640 @@ $---
 	+	2	0
 	+	2	0
 
+> ~/.vimrc
+	"	22	0
+	^	28	27
+	.	28	26
+	+	31	0
+	+	31	14
+	+	31	0
+	+	31	10
+	+	31	10
+	+	14	0
+	+	31	0
+	+	31	0
+	+	31	9
+	+	31	0
+	+	31	0
+	+	22	0
+	+	30	0
+	+	24	0
+	+	27	23
+	+	28	26
+
+> ~/__Scratch__
+	"	1	8
+	^	1	9
+	.	1	8
+	+	1	8
+
+> ~/foo
+	"	10	77
+	^	10	4
+	.	10	5
+	+	9	936
+	+	1	11
+	+	3	72
+	+	5	3
+	+	2	3
+	+	3	0
+	+	5	6
+	+	6	50
+	+	7	0
+	+	10	5
+
+> ~/src/sccompiler/eg
+	"	1	0
+
+> ~/src/sccompiler/SCCompiler/Main.hs
+	"	50	0
+	^	49	45
+	.	49	0
+	+	41	0
+	+	52	0
+	+	52	0
+	+	52	0
+	+	38	16
+	+	57	38
+	+	52	0
+	+	41	0
+	+	52	0
+	+	38	37
+	+	52	0
+	+	16	0
+	+	19	0
+	+	41	0
+	+	19	26
+	+	41	25
+	+	19	51
+	+	41	64
+	+	19	31
+	+	57	23
+	+	41	0
+	+	52	61
+	+	72	0
+	+	80	0
+	+	52	0
+	+	19	60
+	+	72	44
+	+	19	72
+	+	72	52
+	+	17	12
+	+	73	0
+	+	72	31
+	+	72	113
+	+	72	102
+	+	72	0
+	+	72	102
+	+	14	0
+	+	20	0
+	+	21	0
+	+	21	0
+	+	14	0
+	+	14	0
+	+	9	0
+	+	12	0
+	+	19	30
+	+	72	33
+	+	21	0
+	+	41	23
+	+	52	0
+	+	52	0
+	+	97	0
+	+	90	0
+	+	89	26
+	+	57	0
+	+	54	0
+	+	53	0
+	+	35	29
+	+	18	10
+	+	59	0
+	+	61	88
+	+	61	0
+	+	59	0
+	+	60	0
+	+	60	30
+	+	60	55
+	+	59	0
+	+	23	0
+	+	59	0
+	+	60	0
+	+	60	40
+	+	41	40
+	+	39	0
+	+	41	43
+	+	60	65
+	+	41	51
+	+	40	48
+	+	41	27
+	+	51	56
+	+	41	25
+	+	51	0
+	+	60	0
+	+	43	29
+	+	60	0
+	+	58	0
+	+	53	0
+	+	54	0
+	+	55	0
+	+	56	0
+	+	52	20
+	+	57	20
+	+	60	0
+	+	52	0
+	+	45	49
+	+	44	30
+	+	42	0
+	+	46	0
+	+	47	43
+	+	47	0
+	+	48	0
+	+	49	0
+
 > ~/src/bddgenerator/compiler/Compiler.hs
-	"	5	0
-	^	1	314
-	.	1	0
+	"	209	36
+	^	180	2
+	.	180	0
 	+	65	0
 	+	45	0
 	+	1	0
+	+	180	0
 
-> ~/src/sccompiler/SCCompiler/Main.hs
-	"	81	102
-	^	81	103
-	.	81	102
-	+	94	42
+> ~/src/bddgenerator/compiler/solver.hs
+	"	64	8
+
+> ~/src/bddgenerator/compiler/Dump.hs
+	"	1	0
+
+> ~/src/sccompiler/test.sh
+	"	17	19
+	^	17	20
+	.	17	19
+	+	17	16
+	+	15	75
+	+	14	0
+	+	3	0
+	+	7	0
+	+	6	0
+	+	7	38
+	+	5	22
+	+	15	49
+	+	9	0
+	+	8	0
+	+	15	41
+	+	3	21
+	+	17	19
+
+> ~/src/sccompiler/out.dot
+	"	1	0
+
+> ~/src/sccompiler/SCCompiler/Generator.hs
+	"	1	0
+	^	232	22
+	.	232	21
+	+	246	39
+	+	246	17
+	+	246	6
+	+	246	0
+	+	246	44
+	+	246	54
+	+	246	18
+	+	170	0
+	+	177	0
+	+	246	34
+	+	246	29
+	+	202	48
+	+	246	0
+	+	224	0
+	+	151	0
+	+	147	0
+	+	133	39
+	+	242	0
+	+	145	0
+	+	242	0
+	+	145	36
+	+	224	35
+	+	261	48
+	+	148	17
+	+	244	18
+	+	242	30
+	+	244	46
+	+	228	3
+	+	224	49
+	+	228	24
+	+	228	10
+	+	228	9
+	+	228	0
+	+	242	0
+	+	241	51
+	+	244	59
+	+	243	35
+	+	228	11
+	+	261	22
+	+	228	32
+	+	231	28
+	+	228	39
+	+	230	36
+	+	231	25
+	+	232	35
+	+	228	0
+	+	224	33
+	+	225	22
+	+	224	23
+	+	228	0
+	+	228	0
+	+	224	20
+	+	228	0
+	+	226	21
+	+	225	23
+	+	226	63
+	+	228	26
+	+	227	63
+	+	142	55
+	+	143	29
+	+	142	68
+	+	143	60
+	+	149	50
+	+	150	32
+	+	71	20
+	+	67	41
+	+	72	11
+	+	73	43
+	+	76	41
+	+	161	24
+	+	162	15
+	+	74	48
+	+	78	46
+	+	166	57
+	+	201	24
+	+	202	49
+	+	223	29
+	+	224	20
+	+	230	30
+	+	226	58
+	+	227	58
+	+	231	21
+	+	232	24
+	+	235	16
+	+	230	39
+	+	231	23
+	+	226	60
+	+	227	60
+	+	235	58
+	+	237	10
+	+	236	7
+	+	238	24
+	+	236	23
+	+	238	25
+	+	237	13
+	+	238	26
+	+	239	42
+	+	233	25
+	+	239	48
+	+	232	21
+	n	55	52
+
+> ~/src/sccompiler/SCCompiler/Types.hs
+	"	32	8
+	^	32	27
+	.	30	38
+	+	68	40
+	+	68	23
+	+	68	11
+	+	68	0
+	+	68	4
+	+	68	4
+	+	68	32
+	+	24	7
+	+	68	0
+	+	24	19
+	+	68	42
+	+	68	23
+	+	24	42
+	+	17	39
+	+	24	14
+	+	17	10
+	+	24	0
+	+	68	0
+	+	68	0
+	+	68	0
+	+	68	0
+	+	42	29
+	+	42	0
+	+	46	0
+	+	46	6
+	+	42	0
+	+	46	0
+	+	52	0
+	+	46	17
+	+	52	0
+	+	46	0
+	+	46	0
+	+	37	0
+	+	24	0
+	+	23	20
+	+	17	0
+	+	17	0
+	+	20	3
+	+	23	20
+	+	17	0
+	+	17	0
+	+	2	2
+	+	2	2
+	+	4	0
+	+	17	0
+	+	2	1
+	+	2	0
+	+	68	0
+	+	68	0
+	+	5	0
+	+	17	0
+	+	2	0
+	+	46	0
+	+	56	22
+	+	52	16
+	+	54	16
+	+	53	20
+	+	23	15
+	+	68	0
+	+	68	0
+	+	13	0
+	+	13	0
+	+	68	0
+	+	6	7
+	+	16	0
+	+	65	31
+	+	67	20
+	+	8	16
+	+	63	20
+	+	57	20
+	+	66	0
+	+	46	14
+	+	61	16
+	+	49	9
+	+	61	0
+	+	46	0
+	+	45	9
+	+	65	19
+	+	12	31
+	+	15	12
+	+	14	11
+	+	15	30
+	+	7	8
+	+	52	18
+	+	53	22
+	+	56	24
+	+	58	0
+	+	32	26
+	+	21	32
+	+	28	10
+	+	27	15
+	+	21	0
+	+	28	0
+	+	2	0
+	+	21	0
+	+	27	0
+	+	9	0
+	+	3	16
+	+	29	19
+	+	30	38
+
+> ~/src/sccompiler/SCCompiler/Simulator.hs
+	"	75	10
+	^	29	49
+	.	29	48
+	+	79	23
+	+	86	0
+	+	85	25
+	+	87	0
+	+	86	26
+	+	88	0
+	+	87	26
+	+	89	0
+	+	88	26
+	+	77	24
+	+	55	24
+	+	19	23
+	+	42	36
+	+	53	72
+	+	44	5
+	+	42	36
+	+	44	16
+	+	42	16
+	+	42	16
+	+	39	0
+	+	42	18
+	+	10	46
+	+	42	69
+	+	8	28
+	+	66	31
+	+	81	50
+	+	65	44
+	+	81	0
+	+	86	0
+	+	65	0
+	+	47	11
+	+	46	31
+	+	47	62
+	+	42	41
+	+	50	3
+	+	47	47
+	+	50	51
+	+	47	17
+	+	49	4
+	+	50	52
+	+	46	31
+	+	47	19
+	+	48	40
+	+	47	28
+	+	42	50
+	+	48	32
+	+	47	37
+	+	85	57
+	+	66	30
+	+	75	30
+	+	76	0
+	+	75	35
+	+	85	48
+	+	66	55
+	+	28	0
+	+	35	26
+	+	28	16
+	+	73	28
+	+	30	17
+	+	38	11
+	+	30	38
+	+	38	59
+	+	30	0
+	+	35	29
+	+	29	18
+	+	36	9
+	+	29	16
+	+	36	41
+	+	29	33
+	+	36	53
+	+	22	51
+	+	19	70
+	+	22	8
+	+	23	13
+	+	25	5
+	+	22	60
+	+	19	36
+	+	25	0
+	+	23	31
+	+	25	25
+	+	23	16
+	+	24	3
+	+	23	46
+	+	25	0
+	+	24	29
+	+	23	49
+	+	24	32
+	+	23	53
+	+	35	12
+	+	24	19
+	+	23	60
+	+	24	4
+	+	29	28
+	+	36	58
+	+	36	13
+	+	34	13
+	+	35	13
+	+	36	58
+	+	36	58
+	+	29	48
+
+> ~/src/mine.dot
+	"	1	0
+
+> ~/src/bddgenerator/build
+	"	21	0
+
+> ~/src/bddgenerator/cudd-2.4.2/RELEASE.NOTES
+	"	1	0
+
+> ~/src/bddgenerator/cudd-2.4.2/README
+	"	1	0
+
+> ~/src/bddgenerator/compiler/out.dot
+	"	1	0
+
+> ~/src/sccompiler/.git/COMMIT_EDITMSG
+	"	1	29
+	^	1	30
+	.	1	29
+	+	1	46
+	+	1	65
+	+	1	66
+	+	1	29
+
+> ~/src/sccompiler/SCCompiler/lolwut
+	"	3	0
+	^	3	0
+	.	3	0
+	+	1	30
+	+	2	6
+	+	1	25
+	+	2	19
+	+	3	0
+
+> ~/src/sccompiler/SCCompiler/Generator.h
+	"	1	0
+
+> ~/src/sccompiler/SCCompiler/Parser.hs
+	"	58	51
+	^	58	52
+	.	58	51
+	+	44	46
+	+	67	0
+	+	68	15
+	+	10	29
+	+	15	7
+	+	24	13
+	+	26	18
+	+	31	23
+	+	31	20
+	+	48	24
+	+	45	15
+	+	29	23
+	+	15	1
+	+	10	31
+	+	41	41
+	+	48	19
+	+	31	16
+	+	31	22
+	+	52	68
+	+	57	13
+	+	53	11
+	+	57	45
+	+	48	20
+	+	40	0
+	+	39	61
+	+	55	29
+	+	56	27
+	+	55	0
+	+	56	0
+	+	3	0
+	+	39	0
+	+	53	19
+	+	57	48
+	+	46	36
+	+	31	0
+	+	27	0
+	+	29	12
+	+	27	12
+	+	29	13
+	+	31	0
+	+	28	0
+	+	31	0
+	+	32	34
+	+	31	35
+	+	30	40
+	+	39	59
+	+	46	48
+	+	8	16
+	+	57	50
+	+	58	51
+	+	54	0
+	+	58	0
+	+	58	36
+	+	54	43
+	+	58	51
+
+> ~/.vim/syntax/haskell.vim
+	"	96	10
+
+> ~/src/bddgenerator/compiler/SymTab.hs
+	"	1	0
+
+> ~/fsmeditor/eg2.scxml
+	"	1	0
+
+> ~/src/sccompiler/SCCompiler/Parser.h
+	"	1	0
+
+> ~/src/bddgenerator/ffi/Cudd.hs
+	"	30	0
+
+> ~/src/bddgenerator/compiler/BDD.hs
+	"	34	0
+
+> ~/README
+	"	9	78
+	^	9	79
+	.	9	78
 	+	11	0
 	+	10	0
-	+	11	9
-	+	94	0
-	+	94	0
-	+	94	46
-	+	94	35
-	+	94	59
-	+	94	29
-	+	94	22
-	+	58	13
-	+	56	27
-	+	34	18
-	+	36	16
-	+	37	0
-	+	46	29
-	+	57	12
-	+	58	16
-	+	60	15
-	+	94	14
-	+	94	28
-	+	94	26
-	+	94	65
-	+	94	26
-	+	94	13
-	+	58	19
-	+	94	49
-	+	58	12
-	+	58	0
-	+	94	67
-	+	94	59
-	+	94	55
-	+	94	4
-	+	94	11
-	+	94	20
-	+	94	29
-	+	94	37
-	+	94	27
-	+	94	0
-	+	94	0
-	+	94	0
-	+	94	0
-	+	94	48
-	+	94	68
-	+	94	29
-	+	94	55
-	+	94	0
-	+	58	0
-	+	73	5
-	+	70	40
-	+	73	29
-	+	58	0
-	+	72	0
-	+	58	11
-	+	73	17
-	+	74	13
-	+	73	5
-	+	70	0
-	+	74	0
-	+	73	0
-	+	69	23
-	+	94	0
-	+	47	18
-	+	7	23
-	+	47	20
-	+	56	0
-	+	58	0
-	+	55	0
-	+	7	27
-	+	47	38
-	+	53	31
-	+	28	0
-	+	30	0
-	+	29	16
-	+	53	29
-	+	47	0
-	+	43	36
-	+	54	0
-	+	52	12
-	+	47	38
-	+	94	0
-	+	94	0
-	+	94	0
-	+	75	0
-	+	75	0
-	+	13	0
-	+	12	0
-	+	17	0
-	+	18	0
-	+	20	0
-	+	21	0
-	+	22	0
-	+	23	0
-	+	24	0
-	+	25	0
-	+	20	0
-	+	21	0
-	+	93	0
-	+	81	102
+	+	9	78
+
+> ~/.ssh/id_dsa.pub
+	"	1	0
+
+> ~/.git/COMMIT_EDITMSG
+	"	1	10
+	^	1	11
+	.	1	10
+	+	1	10
 
 > ~/src/sccompiler/SCCompiler/Main.h
 	"	1	0
@@ -615,12 +1138,6 @@ $---
 > ~/src/bddgenerator/compiler/Parser.hs
 	"	1	0
 
-> ~/src/bddgenerator/compiler/SymTab.hs
-	"	58	0
-
-> ~/src/bddgenerator/compiler/solver.hs
-	"	48	0
-
 > /usr/local/share/vim/vim73/doc/map.txt
 	"	501	5
 
@@ -681,332 +1198,8 @@ $---
 	.	1	0
 	+	1	0
 
-> ~/src/sccompiler/SCCompiler/Generator.hs
-	"	237	0
-	^	38	36
-	.	38	35
-	+	81	29
-	+	75	29
-	+	74	29
-	+	73	29
-	+	86	30
-	+	90	30
-	+	72	24
-	+	1	0
-	+	50	51
-	+	70	54
-	+	72	0
-	+	74	23
-	+	75	23
-	+	73	24
-	+	74	23
-	+	75	23
-	+	81	24
-	+	75	65
-	+	85	27
-	+	77	26
-	+	80	7
-	+	77	12
-	+	87	32
-	+	89	0
-	+	86	5
-	+	92	0
-	+	92	0
-	+	92	0
-	+	55	0
-	+	69	0
-	+	92	56
-	+	16	44
-	+	25	34
-	+	107	51
-	+	111	24
-	+	115	36
-	+	124	29
-	+	167	0
-	+	166	51
-	+	203	29
-	+	207	31
-	+	58	77
-	+	59	73
-	+	60	76
-	+	59	66
-	+	64	0
-	+	65	0
-	+	64	33
-	+	63	57
-	+	86	0
-	+	90	15
-	+	89	0
-	+	88	3
-	+	90	29
-	+	95	0
-	+	97	0
-	+	98	0
-	+	101	4
-	+	102	0
-	+	103	0
-	+	102	5
-	+	103	5
-	+	100	67
-	+	101	24
-	+	102	14
-	+	103	14
-	+	97	38
-	+	102	69
-	+	106	0
-	+	74	53
-	+	105	0
-	+	106	0
-	+	105	0
-	+	33	31
-	+	34	33
-	+	36	6
-	+	34	29
-	+	36	38
-	+	37	8
-	+	34	36
-	+	38	16
-	+	37	10
-	+	38	29
-	+	42	52
-	+	44	27
-	+	42	21
-	+	46	21
-	+	42	59
-	+	46	46
-	+	34	48
-	+	4	12
-	+	34	64
-	+	34	0
-	+	34	27
-	+	45	35
-	+	38	19
-	+	34	0
-	+	38	40
-	+	40	26
-	+	38	35
-
 > /usr/local/share/vim/vim73/doc/options.txt
 	"	6046	37
-
-> ~/src/sccompiler/.git/COMMIT_EDITMSG
-	"	1	0
-	^	1	36
-	.	1	35
-	+	1	46
-	+	1	65
-	+	1	66
-	+	1	35
-
-> ~/src/sccompiler/SCCompiler/Types.hs
-	"	50	0
-	^	50	0
-	.	49	0
-	+	59	17
-	+	59	19
-	+	59	50
-	+	59	14
-	+	59	21
-	+	59	16
-	+	59	36
-	+	59	33
-	+	59	0
-	+	59	0
-	+	59	0
-	+	22	27
-	+	16	0
-	+	59	40
-	+	59	23
-	+	59	11
-	+	59	0
-	+	59	4
-	+	59	4
-	+	59	32
-	+	22	7
-	+	59	0
-	+	22	19
-	+	59	42
-	+	59	23
-	+	22	42
-	+	16	39
-	+	22	14
-	+	16	10
-	+	22	0
-	+	59	0
-	+	59	0
-	+	59	0
-	+	59	0
-	+	33	29
-	+	33	0
-	+	37	0
-	+	37	6
-	+	33	0
-	+	37	0
-	+	43	0
-	+	37	17
-	+	43	0
-	+	37	0
-	+	37	0
-	+	28	0
-	+	22	0
-	+	21	20
-	+	16	0
-	+	16	0
-	+	19	3
-	+	21	20
-	+	16	0
-	+	16	0
-	+	2	2
-	+	2	2
-	+	3	0
-	+	16	0
-	+	2	1
-	+	2	0
-	+	59	0
-	+	59	0
-	+	4	0
-	+	16	0
-	+	2	0
-	+	37	0
-	+	47	22
-	+	43	16
-	+	45	16
-	+	44	20
-	+	21	15
-	+	59	0
-	+	59	0
-	+	12	0
-	+	12	0
-	+	59	0
-	+	5	7
-	+	15	0
-	+	56	31
-	+	58	20
-	+	7	16
-	+	54	20
-	+	48	20
-	+	57	0
-	+	37	14
-	+	52	16
-	+	40	9
-	+	52	0
-	+	37	0
-	+	36	9
-	+	56	19
-	+	11	31
-	+	14	12
-	+	13	11
-	+	14	30
-	+	6	8
-	+	43	18
-	+	44	22
-	+	47	24
-	+	49	0
-
-> ~/src/sccompiler/SCCompiler/Simulator.hs
-	"	14	0
-	^	66	56
-	.	66	28
-	+	28	9
-	+	29	9
-	+	19	29
-	+	50	18
-	+	51	18
-	+	52	23
-	+	51	22
-	+	50	22
-	+	54	0
-	+	53	27
-	+	52	25
-	+	51	23
-	+	50	23
-	+	54	27
-	+	57	0
-	+	61	4
-	+	61	0
-	+	60	0
-	+	65	0
-	+	66	0
-	+	66	0
-	+	55	0
-	+	55	26
-	+	56	0
-	+	59	1
-	+	58	29
-	+	61	27
-	+	62	1
-	+	67	1
-	+	66	0
-	+	72	20
-	+	73	0
-	+	72	18
-	+	73	18
-	+	75	21
-	+	76	25
-	+	77	24
-	+	78	0
-	+	76	27
-	+	77	27
-	+	75	23
-	+	73	21
-	+	72	23
-	+	79	0
-	+	78	25
-	+	80	0
-	+	79	26
-	+	81	0
-	+	80	26
-	+	82	0
-	+	81	26
-	+	70	24
-	+	48	24
-	+	19	23
-	+	35	36
-	+	46	72
-	+	37	5
-	+	35	36
-	+	37	16
-	+	35	16
-	+	35	16
-	+	32	0
-	+	35	18
-	+	10	46
-	+	35	69
-	+	8	28
-	+	59	31
-	+	74	50
-	+	58	44
-	+	74	0
-	+	79	0
-	+	58	0
-	+	40	11
-	+	39	31
-	+	40	62
-	+	35	41
-	+	43	3
-	+	40	47
-	+	43	51
-	+	40	17
-	+	42	4
-	+	43	52
-	+	39	31
-	+	40	19
-	+	41	40
-	+	40	28
-	+	35	50
-	+	41	32
-	+	40	37
-	+	78	57
-	+	59	30
-	+	68	30
-	+	69	0
-	+	68	35
-	+	78	48
-	+	59	55
-	+	24	0
-	+	30	26
-	+	24	16
-	+	66	28
 
 > ~/src/bddgenerator/compiler/Compiler.h
 	"	1	0
@@ -1022,9 +1215,6 @@ $---
 
 > ~/src/bddgenerator/eg_turn
 	"	66	0
-
-> ~/src/bddgenerator/compiler/BDD.hs
-	"	34	0
 
 > ~/src/bddgenerator/compiler/solver
 	"	1	0
@@ -1055,9 +1245,6 @@ $---
 
 > ~/src/bddgenerator/compiler/Util.hs
 	"	1	0
-
-> ~/src/bddgenerator/compiler/Dump.hs
-	"	27	8
 
 > ~/src/bddgenerator/compiler/Main.hs
 	"	1	0
@@ -1091,30 +1278,6 @@ $---
 	.	4	0
 	+	5	0
 	+	4	0
-
-> ~/src/sccompiler/SCCompiler/Generator.h
-	"	1	0
-
-> ~/src/sccompiler/test.sh
-	"	3	21
-	^	3	22
-	.	3	21
-	+	17	16
-	+	15	75
-	+	14	0
-	+	3	0
-	+	7	0
-	+	6	0
-	+	7	38
-	+	5	22
-	+	15	49
-	+	9	0
-	+	8	0
-	+	15	41
-	+	3	21
-
-> ~/src/bddgenerator/build
-	"	21	37
 
 > ~/src/sccompiler/SCCompiler/Types.h
 	"	1	0
@@ -1165,30 +1328,6 @@ $---
 	+	428	0
 	+	423	33
 	+	429	30
-
-> ~/.vim/syntax/haskell.vim
-	"	248	11
-
-> ~/.vimrc
-	"	28	26
-	^	28	27
-	.	28	26
-	+	31	0
-	+	31	14
-	+	31	0
-	+	31	10
-	+	31	10
-	+	14	0
-	+	31	0
-	+	31	0
-	+	31	9
-	+	31	0
-	+	31	0
-	+	22	0
-	+	30	0
-	+	24	0
-	+	27	23
-	+	28	26
 
 > ~/src/temp/dotrc/vimrc
 	"	20	4
@@ -1341,32 +1480,6 @@ $---
 > ~/src/bddgenerator/eg_error_turn
 	"	1	0
 
-> ~/src/bddgenerator/cudd-2.4.2/README
-	"	1	0
-
-> ~/src/sccompiler/SCCompiler/Parser.hs
-	"	27	3
-	^	44	20
-	.	30	22
-	+	41	46
-	+	53	0
-	+	54	15
-	+	9	29
-	+	14	7
-	+	23	13
-	+	25	18
-	+	30	23
-	+	27	20
-	+	44	24
-	+	42	15
-	+	26	23
-	+	14	1
-	+	9	31
-	+	38	41
-	+	44	19
-	+	27	16
-	+	30	22
-
 > ~/test
 	"	1	0
 
@@ -1416,234 +1529,4 @@ $---
 	"	1	0
 
 > /data/git_root/driver_synth/sccompiler/sccompiler.hs
-	"	1	0
-
-> ~/src/blah/sccompiler/.git/COMMIT_EDITMSG
-	"	2	2
-	^	1	11
-	.	1	10
-	+	1	10
-
-> ~/src/blah/sccompiler/sccompiler.hs
-	"	5	15
-	^	5	16
-	.	5	15
-	+	5	15
-
-> ~/src/sccompiler/uart.scxml
-	"	1	0
-
-> ~/src/SCCompiler/Main.hs
-	"	26	15
-	^	5	27
-	.	10	0
-	+	32	34
-	+	32	0
-	+	32	0
-	+	32	0
-	+	32	0
-	+	32	0
-	+	32	0
-	+	32	24
-	+	32	15
-	+	32	11
-	+	32	61
-	+	32	0
-	+	32	0
-	+	32	18
-	+	32	4
-	+	32	22
-	+	32	37
-	+	32	0
-	+	32	0
-	+	32	0
-	+	32	0
-	+	32	0
-	+	32	0
-	+	32	7
-	+	32	30
-	+	32	22
-	+	32	3
-	+	32	4
-	+	32	6
-	+	32	14
-	+	32	33
-	+	32	13
-	+	32	4
-	+	32	16
-	+	32	21
-	+	32	42
-	+	32	10
-	+	32	0
-	+	32	0
-	+	32	11
-	+	32	13
-	+	32	24
-	+	32	27
-	+	32	25
-	+	32	15
-	+	32	15
-	+	32	37
-	+	32	11
-	+	32	20
-	+	32	12
-	+	32	16
-	+	32	27
-	+	32	14
-	+	32	13
-	+	32	0
-	+	32	14
-	+	32	16
-	+	32	35
-	+	32	21
-	+	32	14
-	+	32	9
-	+	32	15
-	+	32	17
-	+	32	17
-	+	32	28
-	+	32	11
-	+	32	41
-	+	32	17
-	+	32	33
-	+	32	34
-	+	32	0
-	+	32	80
-	+	32	47
-	+	32	18
-	+	32	33
-	+	32	69
-	+	32	11
-	+	32	79
-	+	32	5
-	+	32	17
-	+	32	60
-	+	32	29
-	+	32	6
-	+	32	0
-	+	32	18
-	+	32	76
-	+	32	29
-	+	32	76
-	+	32	80
-	+	32	86
-	+	32	9
-	+	32	30
-	+	32	38
-	+	32	0
-	+	1	0
-	+	32	0
-	+	5	26
-	+	7	0
-	+	10	0
-
-> ~/src/SCCompiler/Generator.hs
-	"	25	18
-	^	25	19
-	.	25	18
-	+	9	0
-	+	10	0
-	+	10	0
-	+	8	0
-	+	25	18
-
-> ~/src/SCCompiler/Types.hs
-	"	36	1
-	^	36	13
-	.	36	12
-	+	1	17
-	+	5	20
-	+	2	11
-	+	3	11
-	+	4	16
-	+	2	14
-	+	3	13
-	+	4	0
-	+	2	0
-	+	18	19
-	+	41	24
-	+	46	24
-	+	50	0
-	+	52	19
-	+	46	20
-	+	52	24
-	+	46	12
-	+	52	12
-	+	52	0
-	+	51	0
-	+	32	4
-	+	29	8
-	+	32	11
-	+	38	14
-	+	38	11
-	+	38	9
-	+	38	0
-	+	38	0
-	+	38	0
-	+	38	0
-	+	38	7
-	+	34	1
-	+	33	1
-	+	38	0
-	+	29	13
-	+	31	5
-	+	32	11
-	+	30	3
-	+	33	0
-	+	34	0
-	+	33	3
-	+	34	3
-	+	33	13
-	+	34	12
-	+	36	12
-
-> ~/src/SCCompiler/Main.h
-	"	1	0
-
-> ~/src/SCCompiler/Parser.hs
-	"	44	31
-	^	44	30
-	.	44	31
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	6	0
-	+	8	0
-	+	1	0
-	+	7	0
-	+	37	29
-	+	44	31
-
-> ./vim/state.vim
-	"	1	0
-
-> ~/.vim/state.vim
-	"	23	18
-	^	23	19
-	.	23	18
-	+	18	0
-	+	24	9
-	+	23	18
-
-> ~/.vim/macros.vim
-	"	51	0
-
-> ~/src/test.sh
-	"	6	1
-	^	6	2
-	.	6	0
-	+	5	22
-	+	1	11
-	+	3	3
-	+	7	0
-	+	6	0
-
-> ~/src/Makefile
-	"	1	0
-	^	1	0
-	.	1	0
-	+	1	0
-
-> ~/src/SCCompiler/Parser.
 	"	1	0
