@@ -14,3 +14,5 @@ else
 fi
 
 alias ll='ls -all'
+
+export HISTIGNORE="&:ls:[bf]g:exit"
