@@ -167,7 +167,8 @@ hi Exception       guifg=#c3bf9f gui=bold
 hi Float           guifg=#c0bed1
 hi FoldColumn      guifg=#93b3a3 guibg=#3f4040
 hi Folded          guifg=#93b3a3 guibg=#3f4040
-hi Function        guifg=#efef8f
+"""hi Function        guifg=#efef8f
+hi Function        guifg=#dfdfbf
 hi Identifier      guifg=#efdcbc
 hi IncSearch       guibg=#f8f893 guifg=#385f38
 hi Keyword         guifg=#f0dfaf gui=bold
@@ -210,16 +211,20 @@ hi SpellRare  guisp=#bc6c9c guifg=#bc8cbc
 hi SpellLocal guisp=#7cac7c guifg=#9ccc9c
 
 " Entering Kurt zone
+" Modified by Alex
 if &t_Co > 255
     hi Boolean         ctermfg=181
     hi Character       ctermfg=181   cterm=bold
-    hi Comment         ctermfg=108
-    hi Conditional     ctermfg=223   cterm=bold
+"""    hi Comment         ctermfg=108
+    hi Comment         ctermfg=116
+"""    hi Conditional     ctermfg=223   cterm=bold
+    hi Conditional     ctermfg=187   cterm=bold
     hi Constant        ctermfg=181   cterm=bold
     hi Cursor          ctermfg=233   ctermbg=109     cterm=bold
     hi Debug           ctermfg=181   cterm=bold
     hi Define          ctermfg=223   cterm=bold
-    hi Delimiter       ctermfg=245
+"""    hi Delimiter       ctermfg=245
+    hi Delimiter       ctermfg=245   cterm=bold
     hi DiffAdd         ctermfg=66    ctermbg=237     cterm=bold
     hi DiffChange      ctermbg=236
     hi DiffDelete      ctermfg=236   ctermbg=238
@@ -230,7 +235,8 @@ if &t_Co > 255
     hi Float           ctermfg=251
     hi FoldColumn      ctermfg=109   ctermbg=238
     hi Folded          ctermfg=109   ctermbg=238
-    hi Function        ctermfg=228
+"""    hi Function        ctermfg=228
+    hi Function        ctermfg=174   cterm=bold
     hi Identifier      ctermfg=223
     hi IncSearch       ctermbg=228   ctermfg=238
     hi Keyword         ctermfg=223   cterm=bold
@@ -240,7 +246,8 @@ if &t_Co > 255
     hi ModeMsg         ctermfg=223   cterm=none
     hi MoreMsg         ctermfg=15    cterm=bold
     hi Number          ctermfg=116
-    hi Operator        ctermfg=230
+"""    hi Operator        ctermfg=230
+    hi Operator        ctermfg=7     cterm=bold
     hi PreCondit       ctermfg=180   cterm=bold
     hi PreProc         ctermfg=223   cterm=bold
     hi Question        ctermfg=15    cterm=bold
@@ -260,7 +267,8 @@ if &t_Co > 255
     hi Title           ctermfg=7     ctermbg=234     cterm=bold
     hi Todo            ctermfg=108   ctermbg=234     cterm=bold
     hi Typedef         ctermfg=253   cterm=bold
-    hi Type            ctermfg=187   cterm=bold
+"""    hi Type            ctermfg=187   "cterm=bold
+    hi Type            ctermfg=223   "cterm=bold
     hi Underlined      ctermfg=188   ctermbg=234     cterm=bold
     hi VertSplit       ctermfg=236   ctermbg=65
     hi VisualNOS       ctermfg=236   ctermbg=210     cterm=bold
@@ -411,9 +419,15 @@ endif
 if exists("g:zenburn_alternate_Include") && g:zenburn_alternate_Include
     " original setting
     hi Include      guifg=#ffcfaf gui=bold
+    if &t_Co > 255
+        hi Include  ctermfg=180   cterm=bold
+    endif
 else
     " new, less contrasted one
     hi Include      guifg=#dfaf8f gui=bold
+    if &t_Co > 255
+        hi Include  ctermfg=108   cterm=bold
+    endif
 endif
 
 if exists("g:zenburn_color_also_Ignore") && g:zenburn_color_also_Ignore
@@ -423,3 +437,4 @@ if exists("g:zenburn_color_also_Ignore") && g:zenburn_color_also_Ignore
 endif
 
 " TODO check for more obscure syntax groups that they're ok
+

@@ -22,7 +22,7 @@ endif
 " Colour scheme stuff
 set t_Co=256
 ":let g:zenburn_high_Contrast=1
-:colors zenburn
+:colors myzenburn
 
 let hs_highlight_types=1
 let hs_highlight_delimiters=1

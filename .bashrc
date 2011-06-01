@@ -16,3 +16,7 @@ fi
 alias ll='ls -all'
 
 export HISTIGNORE="&:ls:[bf]g:exit"
+
+export FIGNORE=${FIGORE}:.hi
+
+alias rmswp='find -iname *.swp -type f -print0 2> /dev/null | xargs -0 rm -vf'
