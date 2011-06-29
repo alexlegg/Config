@@ -9,6 +9,7 @@ filetype plugin indent on
 autocmd BufNewFile,BufRead *.txt setlocal ft=text
 autocmd BufNewFile,BufRead mutt* setlocal ft=mail
 autocmd BufNewFile,BufRead *.tex setlocal ft=tex
+autocmd BufNewFile,BufRead *.pde setlocal ft=cpp
 
 " Set options based on filetypes, overriding the filetype plugin/indent options
 autocmd FileType text call WrapOn()
