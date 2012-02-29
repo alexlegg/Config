@@ -28,3 +28,9 @@ let hs_highlight_types=1
 let hs_highlight_delimiters=1
 
 nnoremap <esc> :noh<return><esc>
+
+fu! GlobSpace(...)
+    return join(map(copy(a:000), "substitute(glob(v:val), '\n', ' ', 'g')"))
+endfu
+
+map <F4> :execute "vimgrep /" . expand("<cword>") . "/j " GlobSpace("*.[ch]", "*.[ch]pp", "*.hs") <Bar> cw<CR> ^M

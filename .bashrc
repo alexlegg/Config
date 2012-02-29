@@ -1,6 +1,12 @@
 # We run the environment settings for all shells to ensure it's always set up
 source "${HOME}/.bash/environment"
 
+PATH=$PATH:/home/ajl/src/termite2/bin
+
+PATH=$PATH:/home/ajl/.cabal/bin
+
+###PATH=$PATH:/home/ajl/progress
+
 # An interactive shell starting bashrc is not a login shell, just run
 # interactive setup
 if [ -n "${PS1}" ]; then
@@ -14,6 +20,7 @@ else
 fi
 
 alias ll='ls -all'
+alias ack="ack-grep"
 
 export HISTIGNORE="&:ls:[bf]g:exit"
 

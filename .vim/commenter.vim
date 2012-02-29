@@ -41,6 +41,7 @@ function! ToggleCommentify()
 		\'///': [
 			\'c',
 			\'cpp',
+	        \'dml',
 			\'java',
 			\'javascript',
 			\'objc',
